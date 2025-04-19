@@ -29,8 +29,9 @@ A Java Swing application for managing cashier data with CRUD operations (Create,
 
 # Preview
 ### Customer's Form
-![image](https://github.com/user-attachments/assets/74eb72f9-c606-4401-b5b0-a9cc491be85c)
+![image](https://github.com/user-attachments/assets/d086f3ec-4163-4551-87d8-ba6b79342647)
 
 ### Cashier's Form
-![image](https://github.com/user-attachments/assets/c8869374-c182-4e3c-8efb-f8c352bf1e81)
+![image](https://github.com/user-attachments/assets/ba43ac35-2b9c-4546-93c7-ebb4087b3e8d)
+
 
