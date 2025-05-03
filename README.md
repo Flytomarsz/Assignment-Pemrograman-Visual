@@ -1,4 +1,4 @@
-# Cashier & Customer Management System
+a# Cashier & Customer Management System
 A Java Swing application for managing cashier data with CRUD operations (Create, Read, Update, Delete), integrated with MySQL database. Designed for retail/store administration to maintain cashier records efficiently.
 
 ## Key Features
@@ -26,13 +26,14 @@ A Java Swing application for managing cashier data with CRUD operations (Create,
 
 # Preview
 ### Form Pelanggan
-![image](https://github.com/user-attachments/assets/d086f3ec-4163-4551-87d8-ba6b79342647)
+![image](https://github.com/user-attachments/assets/3acd02c5-ef68-497c-8d04-d94113b6d50d)
 
 ### Form Kasir
-![image](https://github.com/user-attachments/assets/33e8a57d-904a-431c-bdd9-d4f1ef1b0165)
+![image](https://github.com/user-attachments/assets/ace8cb55-8991-4e60-8868-4a631f4238fd)
 
 ### Form Barang
-![image](https://github.com/user-attachments/assets/ae945b81-fdb6-400f-a015-b4b4990388a9)
+![image](https://github.com/user-attachments/assets/4df24e39-290b-4482-86e8-327268c61f59)
+
 
 
 
