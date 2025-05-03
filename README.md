@@ -24,17 +24,15 @@ A Java Swing application for managing cashier data with CRUD operations (Create,
 2. Update DB credentials in koneksi.java if needed
 3. Compile and run Kasir.java
 
-## Upcoming Feature 
-- Transaction's Form
-
-# ERD Diagram
-![image](https://github.com/user-attachments/assets/7b84f32d-cc07-4180-8f09-2f642c1f23c0)
-
 # Preview
-### Customer's Form
+### Form Pelanggan
 ![image](https://github.com/user-attachments/assets/d086f3ec-4163-4551-87d8-ba6b79342647)
 
-### Cashier's Form
-![image](https://github.com/user-attachments/assets/ba43ac35-2b9c-4546-93c7-ebb4087b3e8d)
+### Form Kasir
+![image](https://github.com/user-attachments/assets/33e8a57d-904a-431c-bdd9-d4f1ef1b0165)
+
+### Form Barang
+![image](https://github.com/user-attachments/assets/ae945b81-fdb6-400f-a015-b4b4990388a9)
+
 
 
