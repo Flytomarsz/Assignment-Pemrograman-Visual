@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Waktu pembuatan: 23 Apr 2025 pada 14.28
+-- Waktu pembuatan: 03 Bulan Mei 2025 pada 10.49
 -- Versi server: 10.4.32-MariaDB
 -- Versi PHP: 8.0.30
 
@@ -40,7 +40,9 @@ CREATE TABLE `barang` (
 --
 
 INSERT INTO `barang` (`kode_brg`, `nm_brg`, `kategori`, `hrg_beli`, `hrg_jual`) VALUES
-('0868', 'coca cola', 'Minuman', '8000', '10000');
+('12M', 'G2G Blueberry Moist', 'Moisturizer', '38000', '49000'),
+('35S', 'SOMEBYMI Yuja Niacin', 'Serum', '189000', '250000'),
+('50F', 'Kelly Facial Wash', 'Facial Wash', '4000', '7000');
 
 -- --------------------------------------------------------
 
@@ -62,7 +64,9 @@ CREATE TABLE `kasir` (
 
 INSERT INTO `kasir` (`id`, `nmksr`, `jenis`, `telepon`, `alamat`) VALUES
 (1, 'Kasir 1', 'Laki-Laki', '0812345', 'Jakarta'),
-(2, 'Kasir 2', 'Perempuan', '0856789', 'Bandung');
+(2, 'Kasir 2', 'Perempuan', '0856789', 'Bandung'),
+(3, 'jojo', 'Laki-Laki', '7897876', 'klapanunggal'),
+(4, 'erlangga', 'Laki-Laki', '3323311', 'Bogor');
 
 -- --------------------------------------------------------
 
@@ -83,8 +87,9 @@ CREATE TABLE `pelanggan` (
 --
 
 INSERT INTO `pelanggan` (`id`, `nmplgn`, `jenis`, `telepon`, `alamat`) VALUES
-(5, 'Marsa', 'Perempuan', '089128361728', 'Cariu'),
-(6, 'Choi San', 'Laki-Laki', '081273654828', 'Seoul, South Korea');
+(6, 'Choi San', 'Laki-Laki', '081273654828', 'Seoul, South Korea'),
+(7, 'Marsa', 'Perempuan', '089128361728', 'Jakarta'),
+(8, 'Desi', 'Perempuan', '089128361728', 'Cariu');
 
 --
 -- Indexes for dumped tables
@@ -116,13 +121,13 @@ ALTER TABLE `pelanggan`
 -- AUTO_INCREMENT untuk tabel `kasir`
 --
 ALTER TABLE `kasir`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 
 --
 -- AUTO_INCREMENT untuk tabel `pelanggan`
 --
 ALTER TABLE `pelanggan`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
