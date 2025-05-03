@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Waktu pembuatan: 19 Apr 2025 pada 05.21
+-- Waktu pembuatan: 23 Apr 2025 pada 14.28
 -- Versi server: 10.4.32-MariaDB
 -- Versi PHP: 8.0.30
 
@@ -20,6 +20,27 @@ SET time_zone = "+00:00";
 --
 -- Database: `penjualan`
 --
+
+-- --------------------------------------------------------
+
+--
+-- Struktur dari tabel `barang`
+--
+
+CREATE TABLE `barang` (
+  `kode_brg` varchar(6) NOT NULL,
+  `nm_brg` varchar(20) NOT NULL,
+  `kategori` varchar(20) NOT NULL,
+  `hrg_beli` varchar(25) NOT NULL,
+  `hrg_jual` varchar(25) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+--
+-- Dumping data untuk tabel `barang`
+--
+
+INSERT INTO `barang` (`kode_brg`, `nm_brg`, `kategori`, `hrg_beli`, `hrg_jual`) VALUES
+('0868', 'coca cola', 'Minuman', '8000', '10000');
 
 -- --------------------------------------------------------
 
@@ -62,13 +83,18 @@ CREATE TABLE `pelanggan` (
 --
 
 INSERT INTO `pelanggan` (`id`, `nmplgn`, `jenis`, `telepon`, `alamat`) VALUES
-(3, 'tks', 'Laki-Laki', '8i', 'depok'),
 (5, 'Marsa', 'Perempuan', '089128361728', 'Cariu'),
 (6, 'Choi San', 'Laki-Laki', '081273654828', 'Seoul, South Korea');
 
 --
 -- Indexes for dumped tables
 --
+
+--
+-- Indeks untuk tabel `barang`
+--
+ALTER TABLE `barang`
+  ADD PRIMARY KEY (`kode_brg`);
 
 --
 -- Indeks untuk tabel `kasir`

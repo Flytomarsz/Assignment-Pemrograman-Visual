@@ -12,7 +12,7 @@ import Koneksi.koneksi;
 
 /**
  *
- * @author Bambang Sutrisna
+ * @author Marsa
  */
 public class Pelanggan extends javax.swing.JFrame {
 private javax.swing.ButtonGroup buttonGroup1;

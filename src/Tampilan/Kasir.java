@@ -13,7 +13,7 @@ import Koneksi.koneksi;
 // Tambahan
 /**
  *
- * @author hp
+ * @author Marsa
  */
 public class Kasir extends javax.swing.JFrame {
     //private javax.swing.ButtonGroup buttonGroup1; // Tambahan
@@ -127,16 +127,46 @@ public class Kasir extends javax.swing.JFrame {
         rlaki.setText("Laki-Laki");
 
         bsimpan.setText("Simpan");
+        bsimpan.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                bsimpanMouseClicked(evt);
+            }
+        });
 
         bubah.setText("Ubah");
+        bubah.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                bubahMouseClicked(evt);
+            }
+        });
 
         bhapus.setText("Hapus");
+        bhapus.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                bhapusMouseClicked(evt);
+            }
+        });
 
         bbatal.setText("Batal");
+        bbatal.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                bbatalMouseClicked(evt);
+            }
+        });
 
         bkeluar.setText("Keluar");
+        bkeluar.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                bkeluarMouseClicked(evt);
+            }
+        });
 
         bcari.setText("Cari");
+        bcari.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                bcariMouseClicked(evt);
+            }
+        });
 
         tblksr.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
@@ -149,6 +179,11 @@ public class Kasir extends javax.swing.JFrame {
                 "Title 1", "Title 2", "Title 3", "Title 4"
             }
         ));
+        tblksr.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                tblksrMouseClicked(evt);
+            }
+        });
         jScrollPane1.setViewportView(tblksr);
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
@@ -251,8 +286,13 @@ public class Kasir extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    // ================= EVENT HANDLERS =================
-    private void bsimpanActionPerformed(java.awt.event.ActionEvent evt) {
+    // ================= EVENT HANDLERS ================= 
+    private void txttelpActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txttelpActionPerformed
+        // TODO add your handling code here:
+        
+    }//GEN-LAST:event_txttelpActionPerformed
+
+    private void bsimpanMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_bsimpanMouseClicked
         String jenis = null;
         if(rlaki.isSelected()) {
             jenis = "Laki-Laki";
@@ -276,18 +316,18 @@ public class Kasir extends javax.swing.JFrame {
         } catch(SQLException e) {
             JOptionPane.showMessageDialog(null, "Gagal simpan: " + e.getMessage());
         }
-    }
-    
-    private void bubahActionPerformed(java.awt.event.ActionEvent evt) {
-        String jenis = null;
+        datatable();   
+    }//GEN-LAST:event_bsimpanMouseClicked
+
+    private void bubahMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_bubahMouseClicked
+            String jenis = null;
         if(rlaki.isSelected()) {
             jenis = "Laki-Laki";
         } else if(rperempuan.isSelected()) {
             jenis = "Perempuan";
         }
         
-        String sql = "UPDATE kasir SET nmksr=?, jenis=?, telepon=?, alamat=? WHERE id=?";
-        
+        String sql = "UPDATE kasir SET nmksr=?, jenis=?, telepon=?, alamat=? WHERE id=?'"+txtid.getText()+"'s";
         try {
             PreparedStatement stat = conn.prepareStatement(sql);
             stat.setString(1, txtnm.getText());
@@ -303,9 +343,10 @@ public class Kasir extends javax.swing.JFrame {
         } catch(SQLException e) {
             JOptionPane.showMessageDialog(null, "Gagal ubah: " + e.getMessage());
         }
-    }
-    
-    private void bhapusActionPerformed(java.awt.event.ActionEvent evt) {
+        datatable();    // TODO add your handling code here:
+    }//GEN-LAST:event_bubahMouseClicked
+
+    private void bhapusMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_bhapusMouseClicked
         int confirm = JOptionPane.showConfirmDialog(null, "Yakin hapus data?", "Konfirmasi", JOptionPane.YES_NO_OPTION);
         if(confirm == JOptionPane.YES_OPTION) {
             String sql = "DELETE FROM kasir WHERE id=?";
@@ -321,40 +362,40 @@ public class Kasir extends javax.swing.JFrame {
                 JOptionPane.showMessageDialog(null, "Gagal hapus: " + e.getMessage());
             }
         }
-    }
-    
-    private void bbatalActionPerformed(java.awt.event.ActionEvent evt) {
+        datatable();    // TODO add your handling code here:
+    }//GEN-LAST:event_bhapusMouseClicked
+
+    private void bbatalMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_bbatalMouseClicked
         kosong();
-    }
-    
-    private void bkeluarActionPerformed(java.awt.event.ActionEvent evt) {
-        System.exit(0);
-    }
-    
-    private void bcariActionPerformed(java.awt.event.ActionEvent evt) {
-        datatable();
-    }
-    
-    private void tblksrMouseClicked(java.awt.event.MouseEvent evt) {
-        int row = tblksr.getSelectedRow();
-        txtid.setText(tabmode.getValueAt(row, 0).toString());
-        txtnm.setText(tabmode.getValueAt(row, 1).toString());
+        datatable();    // TODO add your handling code here:
+    }//GEN-LAST:event_bbatalMouseClicked
+
+    private void bkeluarMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_bkeluarMouseClicked
+        dispose();        // TODO add your handling code here:
+    }//GEN-LAST:event_bkeluarMouseClicked
+
+    private void bcariMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_bcariMouseClicked
+        datatable();    // TODO add your handling code here:
+    }//GEN-LAST:event_bcariMouseClicked
+
+    private void tblksrMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_tblksrMouseClicked
+        int bar = tblksr.getSelectedRow();
+        String a = tabmode.getValueAt(bar, 0).toString();
+        String b = tabmode.getValueAt(bar, 1).toString();
+        String c = tabmode.getValueAt(bar, 2).toString();
+        String d = tabmode.getValueAt(bar, 3).toString();
+        String e = tabmode.getValueAt(bar, 4).toString();
         
-        if(tabmode.getValueAt(row, 2).toString().equals("Laki-Laki")) {
+        txtid.setText(a);
+        txtnm.setText(b);
+        if ("Laki-Laki".equals(c)){
             rlaki.setSelected(true);
-        } else {
+        } else{
             rperempuan.setSelected(true);
         }
-        
-        txttelp.setText(tabmode.getValueAt(row, 3).toString());
-        txtalamat.setText(tabmode.getValueAt(row, 4).toString());
-    }
-    
-    
-    private void txttelpActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txttelpActionPerformed
-        // TODO add your handling code here:
-        
-    }//GEN-LAST:event_txttelpActionPerformed
+        txttelp.setText(d);
+        txtalamat.setText(e);    // TODO add your handling code here:
+    }//GEN-LAST:event_tblksrMouseClicked
 
     /**
      * @param args the command line arguments

@@ -209,26 +209,41 @@
       <Properties>
         <Property name="text" type="java.lang.String" value="Simpan"/>
       </Properties>
+      <Events>
+        <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="bsimpanMouseClicked"/>
+      </Events>
     </Component>
     <Component class="javax.swing.JButton" name="bubah">
       <Properties>
         <Property name="text" type="java.lang.String" value="Ubah"/>
       </Properties>
+      <Events>
+        <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="bubahMouseClicked"/>
+      </Events>
     </Component>
     <Component class="javax.swing.JButton" name="bhapus">
       <Properties>
         <Property name="text" type="java.lang.String" value="Hapus"/>
       </Properties>
+      <Events>
+        <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="bhapusMouseClicked"/>
+      </Events>
     </Component>
     <Component class="javax.swing.JButton" name="bbatal">
       <Properties>
         <Property name="text" type="java.lang.String" value="Batal"/>
       </Properties>
+      <Events>
+        <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="bbatalMouseClicked"/>
+      </Events>
     </Component>
     <Component class="javax.swing.JButton" name="bkeluar">
       <Properties>
         <Property name="text" type="java.lang.String" value="Keluar"/>
       </Properties>
+      <Events>
+        <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="bkeluarMouseClicked"/>
+      </Events>
     </Component>
     <Component class="javax.swing.JTextField" name="txtcari">
     </Component>
@@ -236,6 +251,9 @@
       <Properties>
         <Property name="text" type="java.lang.String" value="Cari"/>
       </Properties>
+      <Events>
+        <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="bcariMouseClicked"/>
+      </Events>
     </Component>
     <Container class="javax.swing.JScrollPane" name="jScrollPane1">
       <AuxValues>
@@ -255,6 +273,9 @@
               </Table>
             </Property>
           </Properties>
+          <Events>
+            <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="tblksrMouseClicked"/>
+          </Events>
         </Component>
       </SubComponents>
     </Container>
