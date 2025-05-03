@@ -1,4 +1,4 @@
-a# Cashier & Customer Management System
+# Cashier & Customer Management System
 A Java Swing application for managing cashier data with CRUD operations (Create, Read, Update, Delete), integrated with MySQL database. Designed for retail/store administration to maintain cashier records efficiently.
 
 ## Key Features
